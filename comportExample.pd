@@ -1,0 +1,12 @@
+#N canvas 350 102 864 517 10;
+#X msg 90 49 devicename /dev/ttyACM0;
+#X obj 155 115 comport 1 9600;
+#X floatatom 125 198 5 0 0 0 - - -;
+#X msg 149 82 close;
+#X obj 150 274 mtof;
+#X obj 159 362 osc~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;

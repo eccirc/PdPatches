@@ -1,0 +1,109 @@
+#N canvas 278 160 1084 428 10;
+#X floatatom 27 48 5 0 0 0 - - -;
+#X floatatom 90 48 5 0 0 0 - - -;
+#X floatatom 150 49 5 0 0 0 - - -;
+#X floatatom 213 47 5 0 0 0 - - -;
+#X floatatom 275 48 5 0 0 0 - - -;
+#X floatatom 336 48 5 0 0 0 - - -;
+#X floatatom 398 48 5 0 0 0 - - -;
+#X floatatom 461 48 5 0 0 0 - - -;
+#X obj 75 213 / 127;
+#X floatatom 75 240 5 0 0 0 - - -;
+#X obj 131 205 / 127;
+#X floatatom 135 231 5 0 0 0 - - -;
+#X obj 193 205 / 127;
+#X floatatom 197 231 5 0 0 0 - - -;
+#X obj 262 206 / 127;
+#X floatatom 266 232 5 0 0 0 - - -;
+#X obj 319 208 / 127;
+#X floatatom 323 234 5 0 0 0 - - -;
+#X obj 381 207 / 127;
+#X floatatom 385 233 5 0 0 0 - - -;
+#X obj 441 204 / 127;
+#X floatatom 445 231 5 0 0 0 - - -;
+#X obj 499 204 / 127;
+#X floatatom 508 229 5 0 0 0 - - -;
+#X obj 614 107 ctlin;
+#X floatatom 591 160 5 0 0 0 - - -;
+#X floatatom 627 162 5 0 0 0 - - -;
+#X floatatom 667 166 5 0 0 0 - - -;
+#X text 173 323 Mappings for Korg nanoKontrol2 Knobs. David Williams
+2018;
+#X obj 103 102 cnv 15 225 45 empty empty empty 20 12 0 14 -232576 -66577
+0;
+#X obj 111 113 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
+0 2.63468e+07 0 1;
+#X obj 140 113 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
+0 2.63468e+07 0 1;
+#X obj 167 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
+0 2.63468e+07 1137 1;
+#X obj 193 113 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
+0 2.63468e+07 0 1;
+#X obj 218 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
+0 2.63468e+07 0 1;
+#X obj 247 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
+0 2.63468e+07 0 1;
+#X obj 274 111 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
+0 2.63468e+07 0 1;
+#X obj 300 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
+0 2.63468e+07 0 1;
+#X obj 71 276 outlet;
+#X obj 138 270 outlet;
+#X obj 195 273 outlet;
+#X obj 252 270 outlet;
+#X obj 325 270 outlet;
+#X obj 386 264 outlet;
+#X obj 443 267 outlet;
+#X obj 500 264 outlet;
+#X obj 17 26 ctlin 16 1;
+#X obj 74 23 ctlin 17 1;
+#X obj 146 11 ctlin 18 1;
+#X obj 209 18 ctlin 19 1;
+#X obj 265 17 ctlin 20 1;
+#X obj 329 22 ctlin 21 1;
+#X obj 402 29 ctlin 22 1;
+#X obj 477 32 ctlin 23 1;
+#X connect 0 0 30 0;
+#X connect 1 0 31 0;
+#X connect 2 0 32 0;
+#X connect 3 0 33 0;
+#X connect 4 0 34 0;
+#X connect 5 0 35 0;
+#X connect 6 0 36 0;
+#X connect 7 0 37 0;
+#X connect 8 0 9 0;
+#X connect 9 0 38 0;
+#X connect 10 0 11 0;
+#X connect 11 0 39 0;
+#X connect 12 0 13 0;
+#X connect 13 0 40 0;
+#X connect 14 0 15 0;
+#X connect 15 0 41 0;
+#X connect 16 0 17 0;
+#X connect 17 0 42 0;
+#X connect 18 0 19 0;
+#X connect 19 0 43 0;
+#X connect 20 0 21 0;
+#X connect 21 0 44 0;
+#X connect 22 0 23 0;
+#X connect 23 0 45 0;
+#X connect 24 0 25 0;
+#X connect 24 1 26 0;
+#X connect 24 2 27 0;
+#X connect 30 0 8 0;
+#X connect 31 0 10 0;
+#X connect 32 0 12 0;
+#X connect 33 0 14 0;
+#X connect 34 0 16 0;
+#X connect 35 0 18 0;
+#X connect 36 0 20 0;
+#X connect 37 0 22 0;
+#X connect 46 0 0 0;
+#X connect 47 0 1 0;
+#X connect 48 0 2 0;
+#X connect 49 0 3 0;
+#X connect 50 0 4 0;
+#X connect 51 0 5 0;
+#X connect 52 0 6 0;
+#X connect 53 0 7 0;
+#X coords 0 -1 1 1 230 50 2 100 100;

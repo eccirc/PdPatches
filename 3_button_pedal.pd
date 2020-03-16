@@ -1,0 +1,106 @@
+#N canvas 243 145 776 559 10;
+#X obj 134 236 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 121 428 outlet;
+#X obj 281 433 outlet;
+#X obj 404 433 outlet;
+#X obj 343 116 ctlin;
+#X floatatom 280 149 5 0 0 0 - - -;
+#X floatatom 343 150 5 0 0 0 - - -;
+#X floatatom 401 151 5 0 0 0 - - -;
+#X obj 126 200 sel 127;
+#X obj 179 199 sel 64;
+#X msg 193 277 1;
+#X obj 142 300 +;
+#X floatatom 142 321 5 0 0 0 - - -;
+#X obj 140 348 sel 2;
+#X obj 107 119 tgl 15 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+1;
+#X obj 185 235 spigot;
+#X msg 150 267 0;
+#X obj 205 257 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 252 241 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 244 205 sel 127;
+#X msg 311 282 1;
+#X obj 260 305 +;
+#X floatatom 260 326 5 0 0 0 - - -;
+#X obj 258 353 sel 2;
+#X obj 127 103 tgl 15 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+1;
+#X obj 303 240 spigot;
+#X msg 268 272 0;
+#X obj 323 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 297 204 sel 65;
+#X obj 382 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 374 208 sel 127;
+#X msg 441 285 1;
+#X obj 390 308 +;
+#X floatatom 390 329 5 0 0 0 - - -;
+#X obj 388 356 sel 2;
+#X obj 147 118 tgl 15 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+1;
+#X obj 433 243 spigot;
+#X msg 398 275 0;
+#X obj 453 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 427 207 sel 66;
+#X text 15 25 A rather longwinded way to convert the momentary push
+switch code to a toggle-latch. For some reason this took me a little
+while to figure out! TO DO - encapsulate this jumble into it's own
+wee patch for re-useability. David Williams August 2019;
+#X connect 0 0 11 0;
+#X connect 0 0 15 1;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 4 2 7 0;
+#X connect 5 0 8 0;
+#X connect 5 0 19 0;
+#X connect 5 0 30 0;
+#X connect 6 0 9 0;
+#X connect 6 0 28 0;
+#X connect 6 0 39 0;
+#X connect 8 0 0 0;
+#X connect 8 1 16 0;
+#X connect 9 0 15 0;
+#X connect 10 0 11 1;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 1 0;
+#X connect 15 0 17 0;
+#X connect 16 0 11 1;
+#X connect 17 0 10 0;
+#X connect 17 0 11 0;
+#X connect 18 0 21 0;
+#X connect 18 0 25 1;
+#X connect 19 0 18 0;
+#X connect 19 1 26 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 2 0;
+#X connect 25 0 27 0;
+#X connect 26 0 21 1;
+#X connect 27 0 20 0;
+#X connect 27 0 21 0;
+#X connect 28 0 25 0;
+#X connect 29 0 32 0;
+#X connect 29 0 36 1;
+#X connect 30 0 29 0;
+#X connect 30 1 37 0;
+#X connect 31 0 32 1;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 35 0 3 0;
+#X connect 36 0 38 0;
+#X connect 37 0 32 1;
+#X connect 38 0 31 0;
+#X connect 38 0 32 0;
+#X connect 39 0 36 0;
+#X coords 0 -1 1 1 70 40 2 100 100;

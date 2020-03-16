@@ -1,0 +1,83 @@
+#N canvas 152 95 1210 597 10;
+#X obj 417 291 hsl 128 15 -50 0 0 0 empty empty empty -2 -8 0 10 -260097
+-1 -1 6600 1;
+#X obj 570 292 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -4034
+-1 -1 6100 1;
+#X obj 520 140 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -4032
+-1 -1 6100 1;
+#X obj 623 264 *;
+#X obj 618 206 select 1;
+#X text 439 59 CROSSFADER David Williams 21.03.2019;
+#X floatatom 566 393 5 0 0 0 - - -;
+#X floatatom 569 325 5 0 0 0 - - -;
+#X msg 629 236 0.5;
+#X floatatom 465 184 5 0 0 0 - - -;
+#X obj 456 212 * -1;
+#X floatatom 456 242 5 0 0 0 - - -;
+#X floatatom 414 319 5 0 0 0 - - -;
+#X obj 414 340 + 50;
+#X floatatom 414 364 5 0 0 0 - - -;
+#X obj 566 363 * 0.02;
+#X obj 416 390 * 0.02;
+#X text 658 131 <-- slider one goes from 0 to 100;
+#X text 678 181 <-- if greater than 50 \, reduce the values (basic
+scale);
+#X text 641 419 <--ignore values we don't want i.e minus numbers with
+clip;
+#X floatatom 694 269 5 0 0 0 - - -;
+#X text 715 293 <-- right slider goes from 0-50;
+#X text 189 290 left slider goes from -50-0 -->;
+#X text 624 364 <-- multiply by 0.02 to get values from 0-1;
+#X text 15 211 Do a bit of maths to reverse the values for the left
+channel (reverse \, then add \, then clip);
+#X obj 620 183 > 50;
+#X obj 517 87 inlet;
+#X obj 405 555 outlet~;
+#X obj 564 560 outlet~;
+#X obj 256 416 inlet~;
+#X obj 323 505 *~;
+#X obj 527 500 *~;
+#X obj 654 533 snapshot~;
+#X obj 631 446 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 635 491 metro 50;
+#X floatatom 651 568 10 0 0 0 - - -;
+#X floatatom 416 411 5 0 0 0 - - -;
+#X obj 564 437 lop~ 10;
+#X obj 415 454 lop~ 10;
+#X obj 392 84 loadbang;
+#X msg 407 113 50;
+#X connect 0 0 12 0;
+#X connect 1 0 7 0;
+#X connect 2 0 3 0;
+#X connect 2 0 25 0;
+#X connect 3 0 1 0;
+#X connect 3 0 9 0;
+#X connect 3 0 20 0;
+#X connect 4 0 8 0;
+#X connect 6 0 37 0;
+#X connect 7 0 15 0;
+#X connect 8 0 3 1;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 0 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 15 0 6 0;
+#X connect 16 0 36 0;
+#X connect 25 0 4 0;
+#X connect 26 0 2 0;
+#X connect 29 0 30 0;
+#X connect 29 0 31 0;
+#X connect 30 0 27 0;
+#X connect 31 0 28 0;
+#X connect 31 0 32 0;
+#X connect 32 0 35 0;
+#X connect 33 0 34 0;
+#X connect 34 0 32 0;
+#X connect 36 0 38 0;
+#X connect 37 0 31 1;
+#X connect 38 0 30 1;
+#X connect 39 0 40 0;
+#X connect 40 0 2 0;
