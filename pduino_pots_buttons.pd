@@ -1,0 +1,149 @@
+#N canvas 229 80 619 554 10;
+#N canvas 274 169 641 418 fromArduino 0;
+#X obj 175 66 route 2 3 4;
+#X obj 104 32 arduino 0;
+#X obj 104 1 loadbang;
+#X obj 104 49 route analog digital;
+#N canvas 692 146 450 340 setAnalog 0;
+#X msg 52 126 0 \$1;
+#X msg 102 126 1 \$1;
+#X msg 152 126 2 \$1;
+#X msg 202 126 3 \$1;
+#X msg 252 126 4 \$1;
+#X msg 302 126 5 \$1;
+#X msg 48 211 set analogIns \$1 \$2 \, bang;
+#X msg 123 242 analogIns 2 1;
+#X obj 51 97 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 102 99 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 151 100 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 200 100 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 251 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 300 103 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 172 44 inlet;
+#X text 331 100 <---connect to these to use the other analog pins;
+#X obj 123 274 outlet;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 16 0;
+#X connect 8 0 0 0;
+#X connect 9 0 1 0;
+#X connect 10 0 2 0;
+#X connect 11 0 3 0;
+#X connect 12 0 4 0;
+#X connect 13 0 5 0;
+#X connect 14 0 8 0;
+#X connect 14 0 9 0;
+#X connect 14 0 10 0;
+#X restore 104 17 pd setAnalog;
+#N canvas 60 58 982 513 setPinMode 0;
+#X msg 355 148 pinMode 2 input;
+#X msg 355 169 pinMode 3 input;
+#X msg 355 189 pinMode 4 input;
+#X msg 461 149 pinMode 14 analog;
+#X msg 462 170 pinMode 15 analog;
+#X msg 460 190 pinMode 16 analog;
+#X obj 399 65 inlet;
+#X text 580 217 <--- add messages here when using more pins (analog/
+digital);
+#X obj 426 279 outlet;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
+#X connect 2 0 8 0;
+#X connect 3 0 8 0;
+#X connect 4 0 8 0;
+#X connect 5 0 8 0;
+#X connect 6 0 0 0;
+#X connect 6 0 1 0;
+#X connect 6 0 2 0;
+#X connect 6 0 3 0;
+#X connect 6 0 4 0;
+#X connect 6 0 5 0;
+#X restore 180 17 pd setPinMode;
+#X obj 104 66 route 0 1 2;
+#X obj 100 100 cnv 15 180 190 empty empty empty 20 12 0 14 -261234
+-66577 0;
+#X obj 109 214 tgl 50 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+1;
+#X obj 109 108 vsl 50 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 165 214 tgl 50 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+1;
+#X obj 165 108 vsl 50 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 221 214 tgl 50 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+1;
+#X obj 221 108 vsl 50 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 12 330 outlet pot1;
+#X obj 84 330 outlet pot2;
+#X obj 157 330 outlet pot3;
+#X obj 244 329 outlet toggle1;
+#X obj 335 329 outlet toggle2;
+#X obj 427 329 outlet toggle3;
+#X obj 175 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 194 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 213 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 20 0;
+#X connect 0 1 21 0;
+#X connect 0 2 22 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 3 1 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 6 0 9 0;
+#X connect 6 1 11 0;
+#X connect 6 2 13 0;
+#X connect 8 0 17 0;
+#X connect 9 0 14 0;
+#X connect 10 0 18 0;
+#X connect 11 0 15 0;
+#X connect 12 0 19 0;
+#X connect 13 0 16 0;
+#X connect 20 0 8 0;
+#X connect 21 0 10 0;
+#X connect 22 0 12 0;
+#X coords 0 -1 1 1 180 200 1 100 100;
+#X restore 100 100 pd fromArduino;
+#X obj 32 362 outlet pot1;
+#X obj 104 362 outlet pot2;
+#X obj 177 362 outlet pot3;
+#X obj 264 361 outlet toggle1;
+#X obj 355 361 outlet toggle2;
+#X obj 447 361 outlet toggle3;
+#X text 289 108 <--pduino/serial comms setup in here;
+#X obj 103 278 cnv 15 15 15 empty empty p1 2 6 0 10 -261234 -66577
+0;
+#X obj 132 279 cnv 15 15 15 empty empty p2 2 6 0 10 -261234 -66577
+0;
+#X obj 167 279 cnv 15 15 15 empty empty p3 2 6 0 10 -261234 -66577
+0;
+#X obj 200 279 cnv 15 15 15 empty empty t1 2 6 0 10 -261234 -66577
+0;
+#X obj 234 279 cnv 15 15 15 empty empty t2 2 6 0 10 -261234 -66577
+0;
+#X obj 263 279 cnv 15 15 15 empty empty t3 2 6 0 10 -261234 -66577
+0;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;
+#X connect 0 3 4 0;
+#X connect 0 4 5 0;
+#X connect 0 5 6 0;
+#X coords 0 -1 1 1 180 200 1 100 100;

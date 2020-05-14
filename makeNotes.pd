@@ -1,0 +1,103 @@
+#N canvas 56 58 1310 710 10;
+#N canvas 60 58 450 250 (subpatch) 0;
+#X array \$0-notes-table 8 float 3;
+#A 0 0 3 5 5 0 5 7 12;
+#X coords 0 12 8 -12 190 220 1 0 0;
+#X restore 128 115 graph;
+#X obj 465 56 f \$0;
+#X obj 462 31 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 465 77 5 0 0 0 - - -;
+#X obj 466 122 pack s;
+#X obj 465 97 makefilename %d-notes-table;
+#X obj 460 416 tabread \$0-notes-table;
+#X obj 396 287 inlet;
+#X obj 457 465 outlet;
+#X obj 463 5 loadbang;
+#X floatatom 453 283 5 0 0 0 - - -;
+#X obj 453 307 sel 0 1 2 3 4 5 6 7;
+#X msg 422 344 0;
+#X msg 449 344 1;
+#X msg 476 344 2;
+#X msg 503 344 3;
+#X msg 530 343 4;
+#X msg 557 343 5;
+#X msg 584 343 6;
+#X msg 611 343 7;
+#X obj 388 391 spigot;
+#X obj 133 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 438 391 spigot;
+#X obj 158 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 485 391 spigot;
+#X obj 182 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 535 391 spigot;
+#X obj 206 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 582 393 spigot;
+#X obj 230 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 632 393 spigot;
+#X obj 254 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 679 393 spigot;
+#X obj 279 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 729 393 spigot;
+#X obj 301 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 549 453 +;
+#X floatatom 101 345 5 0 0 0 - - -;
+#X obj 608 439 int;
+#X msg 465 141 \; \$1 0 0 3 5 5 0 5 7 12 \; \$1 xlabel -12 0 1 2 3
+4 5 6 7 8 \; \$1 ylabel -0.5 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1
+0 1 2 3 4 5 6 7 8 9 10 11 12;
+#X floatatom 102 364 5 0 0 0 - - -;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 4 0 39 0;
+#X connect 5 0 4 0;
+#X connect 6 0 36 0;
+#X connect 7 0 10 0;
+#X connect 9 0 2 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 1 13 0;
+#X connect 11 2 14 0;
+#X connect 11 3 15 0;
+#X connect 11 4 16 0;
+#X connect 11 5 17 0;
+#X connect 11 6 18 0;
+#X connect 11 7 19 0;
+#X connect 12 0 20 0;
+#X connect 13 0 22 0;
+#X connect 14 0 24 0;
+#X connect 15 0 26 0;
+#X connect 16 0 28 0;
+#X connect 17 0 30 0;
+#X connect 18 0 32 0;
+#X connect 19 0 34 0;
+#X connect 20 0 6 0;
+#X connect 21 0 20 1;
+#X connect 22 0 6 0;
+#X connect 23 0 22 1;
+#X connect 24 0 6 0;
+#X connect 25 0 24 1;
+#X connect 26 0 6 0;
+#X connect 27 0 26 1;
+#X connect 28 0 6 0;
+#X connect 29 0 28 1;
+#X connect 30 0 6 0;
+#X connect 31 0 30 1;
+#X connect 32 0 6 0;
+#X connect 33 0 32 1;
+#X connect 34 0 6 0;
+#X connect 35 0 34 1;
+#X connect 36 0 38 0;
+#X connect 37 0 36 1;
+#X connect 38 0 8 0;
+#X connect 38 0 40 0;
+#X coords 0 -1 1 1 230 300 2 100 100;
