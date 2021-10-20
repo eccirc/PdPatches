@@ -161,7 +161,9 @@
 #X obj 351 122 inlet;
 #X obj 390 122 inlet;
 #X text 345 97 attack - decay;
-#X obj 80 79 unpack i f, f 38;
+#X obj 80 71 unpack f f, f 38;
+#X obj 56 96 int;
+#X floatatom 121 96 5 0 0 0 - - -;
 #X connect 1 0 15 0;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
@@ -178,5 +180,8 @@
 #X connect 11 0 10 1;
 #X connect 12 0 4 1;
 #X connect 13 0 4 2;
-#X connect 15 0 5 0;
+#X connect 15 0 16 0;
+#X connect 15 0 17 0;
 #X connect 15 1 4 0;
+#X connect 16 0 5 0;
+#X connect 17 0 4 0;

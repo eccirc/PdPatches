@@ -1,0 +1,37 @@
+#N canvas 694 70 656 682 12;
+#X obj 179 88 unpackOSC;
+#X obj 168 157 unpack 0;
+#X obj 219 207 trigger f f f;
+#X obj 168 122 routeOSC /cc/9;
+#X floatatom 168 182 5 0 0 0 - - -;
+#X obj 183 43 udpreceive 5000;
+#X obj 57 96 unpackOSC;
+#X obj 61 51 udpreceive 8000;
+#X obj 6 292 print;
+#X obj 26 184 routeOSC /3/xy;
+#X obj 60 244 unpack f f;
+#X floatatom 60 269 5 0 0 0 - - -;
+#X floatatom 113 270 5 0 0 0 - - -;
+#X obj 45 349 * 1000;
+#X obj 67 393 sig~;
+#X obj 85 470 bob~;
+#X obj 118 347 * 10;
+#X text 323 66 This seems to work best when laptop is connected to
+the phone via a hotspot - some internet providers block UPD packets!
+;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 3 0 1 0;
+#X connect 5 0 0 0;
+#X connect 6 0 9 0;
+#X connect 7 0 6 0;
+#X connect 9 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 11 0 13 0;
+#X connect 12 0 16 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 1;
+#X connect 16 0 15 2;

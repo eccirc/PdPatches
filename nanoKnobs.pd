@@ -1,4 +1,4 @@
-#N canvas 278 160 1084 428 10;
+#N canvas 691 43 662 688 10;
 #X floatatom 27 48 5 0 0 0 - - -;
 #X floatatom 90 48 5 0 0 0 - - -;
 #X floatatom 150 49 5 0 0 0 - - -;
@@ -31,22 +31,22 @@
 2018;
 #X obj 103 102 cnv 15 225 45 empty empty empty 20 12 0 14 -232576 -66577
 0;
-#X obj 111 113 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
-0 2.63468e+07 0 1;
-#X obj 140 113 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
-0 2.63468e+07 0 1;
-#X obj 167 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
-0 2.63468e+07 1137 1;
-#X obj 193 113 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
-0 2.63468e+07 0 1;
-#X obj 218 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
-0 2.63468e+07 0 1;
-#X obj 247 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
-0 2.63468e+07 0 1;
-#X obj 274 111 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
-0 2.63468e+07 0 1;
-#X obj 300 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 2.65245e+07
-0 2.63468e+07 0 1;
+#X obj 111 113 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 -8.82853e+08
+21891 -8.82853e+08 793 1;
+#X obj 140 113 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 -8.82853e+08
+21891 -8.82853e+08 0 1;
+#X obj 167 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 -8.82853e+08
+21891 -8.82853e+08 0 1;
+#X obj 193 113 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 -8.82853e+08
+21891 -8.82853e+08 0 1;
+#X obj 218 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 -8.82853e+08
+21891 -8.82853e+08 0 1;
+#X obj 247 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 -8.82853e+08
+21891 -8.82853e+08 0 1;
+#X obj 274 111 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 -8.82853e+08
+21891 -8.82853e+08 0 1;
+#X obj 300 112 knob 20 20 0 127 0 0 empty empty empty 0 -8 0 8 -8.82853e+08
+21891 -8.82853e+08 0 1;
 #X obj 71 276 outlet;
 #X obj 138 270 outlet;
 #X obj 195 273 outlet;
@@ -55,14 +55,14 @@
 #X obj 386 264 outlet;
 #X obj 443 267 outlet;
 #X obj 500 264 outlet;
-#X obj 17 26 ctlin 16 1;
-#X obj 74 23 ctlin 17 1;
-#X obj 146 11 ctlin 18 1;
-#X obj 209 18 ctlin 19 1;
-#X obj 265 17 ctlin 20 1;
-#X obj 329 22 ctlin 21 1;
-#X obj 402 29 ctlin 22 1;
-#X obj 477 32 ctlin 23 1;
+#X obj 0 26 ctlin 16;
+#X obj 74 23 ctlin 17;
+#X obj 146 11 ctlin 18;
+#X obj 203 28 ctlin 19;
+#X obj 274 14 ctlin 20;
+#X obj 345 13 ctlin 21;
+#X obj 414 22 ctlin 22;
+#X obj 489 30 ctlin 23;
 #X connect 0 0 30 0;
 #X connect 1 0 31 0;
 #X connect 2 0 32 0;

@@ -1,4 +1,4 @@
-#N canvas 0 58 1366 674 10;
+#N canvas 922 70 428 682 10;
 #X obj 426 57 unpackOSC;
 #X obj 427 24 udpreceive 12345;
 #X obj 425 84 routeOSC /tile/0 /tile/1 /tile/2 /tile/3 /tile/4 /tile/5
@@ -81,7 +81,7 @@
 #X obj 698 595 outlet~;
 #X text 274 447 60 \, 62 \, 64 \, 65 \, 67 \, 69 \, 70 \, 72 \, 74
 ;
-#X obj 420 380 scanOsc 36;
+#X obj 965 266 inlet mod;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -103,7 +103,6 @@
 #X connect 6 0 53 0;
 #X connect 7 0 16 0;
 #X connect 7 0 54 0;
-#X connect 7 0 61 0;
 #X connect 8 0 17 0;
 #X connect 8 0 55 0;
 #X connect 9 0 18 0;
@@ -130,5 +129,13 @@
 #X connect 56 0 59 0;
 #X connect 57 0 59 0;
 #X connect 58 0 59 0;
-#X connect 61 0 59 0;
+#X connect 61 0 50 1;
+#X connect 61 0 51 1;
+#X connect 61 0 52 1;
+#X connect 61 0 53 1;
+#X connect 61 0 54 1;
+#X connect 61 0 55 1;
+#X connect 61 0 56 1;
+#X connect 61 0 57 1;
+#X connect 61 0 58 1;
 #X coords 0 -1 1 1 90 140 1 100 100;
