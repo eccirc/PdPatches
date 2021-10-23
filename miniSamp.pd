@@ -1,10 +1,10 @@
-#N canvas 4 58 675 706 10;
+#N canvas 694 70 656 682 10;
 #X obj 101 102 cnv 15 134 96 empty empty empty 20 12 0 14 -159808 -66577
 0;
-#X obj 133 174 knob 20 20 -24 24 0 0 empty empty detune -3 -6 0 6 2.27814e+07
-0 2.27814e+07 594 1;
+#X obj 133 174 knob 20 20 -24 24 0 0 empty empty detune -3 -6 0 6 -2.07817e+09
+21971 -2.07758e+09 950 1;
 #X obj 19 147 loadbang;
-#X floatatom 155 175 5 0 0 0 - - -;
+#X floatatom 160 176 5 0 0 0 - - -;
 #X obj 103 113 bng 20 250 50 0 \$0-load_file empty load 1 -6 0 8 -261234
 -1 -262144;
 #X obj 103 145 bng 20 250 50 0 empty empty save 1 -6 0 8 -4032 -1 -262144
@@ -12,8 +12,8 @@
 #X obj 129 121 cnv 15 90 40 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array \$0-file 11096 float 4;
-#X coords 0 1 11095 -1 90 40 2 0 0;
+#X array \$0-file 2.32861e+06 float 4;
+#X coords 0 1 2.32861e+06 -1 90 40 2 0 0;
 #X restore 129 121 graph;
 #X obj 292 154 openpanel;
 #X obj 292 103 r \$0-load_file;
@@ -63,7 +63,6 @@
 #X msg 324 392 bang;
 #X obj 397 417 pack 0 f f;
 #X msg 361 393 0;
-#X msg 19 198 1;
 #X obj 74 439 * -0.0577562;
 #X obj 74 460 exp;
 #X floatatom 74 481 5 0 0 0 - - -;
@@ -72,11 +71,11 @@
 #X obj 74 502 t b f;
 #X floatatom 111 558 5 0 0 0 - - -;
 #X text 1 398 do some math for detuning;
-#X obj 110 204 int;
+#X obj 105 221 int;
 #X obj 379 606 outlet~;
 #X obj 313 357 inlet;
 #X text 302 339 trigger in;
-#X obj 61 262 s \$0-detune;
+#X obj 141 277 s \$0-detune;
 #X obj 292 303 s \$0-sampLength;
 #X obj 96 345 r \$0-sampLength;
 #X obj 362 278 s \$0-sBang;
@@ -90,9 +89,14 @@
 #X obj 452 451 r \$0-rev;
 #X obj 488 337 inlet;
 #X text 482 312 detune;
-#X connect 1 0 58 0;
-#X connect 2 0 49 0;
-#X connect 3 0 62 0;
+#X obj 574 178 inlet path;
+#X obj 577 212 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 19 198 1;
+#X connect 1 0 57 0;
+#X connect 2 0 77 0;
+#X connect 3 0 61 0;
+#X connect 3 0 1 0;
 #X connect 8 0 11 0;
 #X connect 8 0 23 0;
 #X connect 9 0 10 0;
@@ -107,18 +111,19 @@
 #X connect 18 0 17 0;
 #X connect 18 0 20 0;
 #X connect 20 0 21 0;
-#X connect 20 0 65 0;
-#X connect 21 0 63 0;
+#X connect 20 0 64 0;
+#X connect 21 0 62 0;
 #X connect 22 0 11 1;
 #X connect 23 0 25 0;
 #X connect 26 0 43 0;
-#X connect 28 0 53 0;
+#X connect 28 0 52 0;
 #X connect 29 0 31 0;
+#X connect 29 0 53 0;
 #X connect 31 0 32 0;
-#X connect 32 0 54 1;
+#X connect 32 0 53 1;
 #X connect 33 0 34 0;
-#X connect 34 0 59 0;
-#X connect 35 0 71 0;
+#X connect 34 0 58 0;
+#X connect 35 0 70 0;
 #X connect 37 0 45 0;
 #X connect 38 0 35 0;
 #X connect 39 0 42 0;
@@ -131,24 +136,27 @@
 #X connect 47 0 26 0;
 #X connect 47 0 39 0;
 #X connect 48 0 47 0;
-#X connect 49 0 1 0;
+#X connect 49 0 50 0;
 #X connect 50 0 51 0;
-#X connect 51 0 52 0;
-#X connect 52 0 55 0;
-#X connect 53 0 31 1;
-#X connect 54 0 56 0;
-#X connect 55 0 54 0;
-#X connect 55 1 54 0;
-#X connect 56 0 69 0;
-#X connect 58 0 3 0;
-#X connect 60 0 46 0;
-#X connect 64 0 31 0;
-#X connect 66 0 28 0;
-#X connect 66 0 29 0;
-#X connect 67 0 50 0;
-#X connect 68 0 47 1;
-#X connect 70 0 47 2;
-#X connect 72 0 37 0;
-#X connect 73 0 41 0;
-#X connect 74 0 1 0;
+#X connect 51 0 54 0;
+#X connect 52 0 31 1;
+#X connect 53 0 55 0;
+#X connect 54 0 53 0;
+#X connect 54 1 53 0;
+#X connect 55 0 68 0;
+#X connect 57 0 61 0;
+#X connect 59 0 46 0;
+#X connect 63 0 31 0;
+#X connect 65 0 28 0;
+#X connect 65 0 29 0;
+#X connect 66 0 49 0;
+#X connect 67 0 47 1;
+#X connect 69 0 47 2;
+#X connect 71 0 37 0;
+#X connect 72 0 41 0;
+#X connect 73 0 1 0;
+#X connect 75 0 11 0;
+#X connect 75 0 76 0;
+#X connect 76 0 12 0;
+#X connect 77 0 1 0;
 #X coords 0 -1 1 1 135 100 1 100 100;
